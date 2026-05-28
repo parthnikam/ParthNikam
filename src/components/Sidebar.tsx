@@ -33,7 +33,7 @@ export default function Sidebar({ className }: { className?: string }) {
               className={`block text-sm transition-all ${
                 isActive
                   ? "font-semibold text-foreground"
-                  : "font-normal text-foreground/60 hover:text-foreground"
+                  : "font-normal text-muted-foreground hover:text-foreground"
               }`}
             >
               {item.name}
@@ -43,7 +43,7 @@ export default function Sidebar({ className }: { className?: string }) {
       </nav>
 
       <div className="mt-6">
-        <p className="mb-2 text-[11px] uppercase tracking-[0.35em] text-foreground/50">Socials</p>
+        <p className="mb-2 text-[11px] uppercase tracking-[0.35em] text-muted-foreground">Socials</p>
         <div className="flex flex-col gap-1">
           {socials.map((social) => (
             <a
@@ -51,7 +51,7 @@ export default function Sidebar({ className }: { className?: string }) {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold hover:text-foreground transition-colors"
+              className="text-sm font-semibold text-foreground hover:text-muted-foreground transition-colors"
             >
               {social.name}
             </a>

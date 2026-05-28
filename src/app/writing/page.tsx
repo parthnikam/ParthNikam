@@ -5,11 +5,11 @@ export default function Writing() {
         <div className="space-y-6">
           <div>
             <h1 className="text-3xl font-bold text-foreground mb-2">Writing</h1>
-            <p className="text-base text-foreground/60">Thoughts, essays, and reflections</p>
+            <p className="text-base text-muted-foreground">Thoughts, essays, and reflections</p>
           </div>
 
           <div className="space-y-4">
-            <p className="text-base text-foreground/80">Coming soon...</p>
+            <p className="text-base text-muted-foreground">Coming soon...</p>
           </div>
         </div>
       </div>

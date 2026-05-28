@@ -1,7 +1,5 @@
 'use client'
 
-import { ExternalLink } from "lucide-react"
-
 function GithubIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -24,7 +22,6 @@ function GithubIcon({ className }: { className?: string }) {
 type Project = {
   id: string
   title: string
-  subtitle?: string
   description: string
   github?: string
   demo?: string
@@ -32,48 +29,61 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: "ai-mock-interviewe",
+    id: "llm-stuff",
+    title: "LLM stuff",
+    description: "foundations of llms that I've been learning and building from scratch.",
+    github: "https://github.com/parthnikam/language-models-stuff",
+    demo: "https://github.com/parthnikam/language-models-stuff",
+  },
+  {
+    id: "gpu-stuff",
+    title: "GPU stuff",
+    description: "basics of gpu stuff that I've been learning. ",
+    github: "https://github.com/parthnikam/gpu-stuff",
+    demo: "https://github.com/parthnikam/gpu-stuff",
+  },
+  {
+    id: "wiki-you",
+    title: "Wiki You",
+    description: "a wikipedia for your .md files inspired by Karpathy's wiki gist.",
+    github: "https://github.com/parthnikam/wiki_you",
+    demo: "https://github.com/parthnikam/wiki_you",
+  },
+  {
+    id: "tag-team",
+    title: "Toastmasters TAG App",
+    description: "A clean tool for recording speaker metrics for your TAG team in Toastmasters meetings. Create a meeting and join as your TAG role, evaluate the speakers and submit your report.",
+    github: "https://github.com/parthnikam/tag-team",
+    demo: "https://usetagteam.vercel.app",
+  },
+  {
+    id: "ai-mock-interview",
     title: "AI Mock Interviewer",
-    subtitle: "Tried to make a spoof of trymocked.com",
-    description: "Test your mock interview communication skills with AI-powered mock interview system.",
+    description: "Test your mock interview communication skills with AI-powered mock interview system. Built for a 6 hour buildathon for voice agents.",
     github: "https://github.com/ParthNikam/ai-mock-interviewer",
     demo: "https://ai-mock-interviewer-omega.vercel.app",
   },
   {
-    id: "drone-swarm",
-    title: "Swarm Intelligence",
-    subtitle: "Autonomous Drone Coordination",
-    description: "Developing algorithms for autonomous drone swarm coordination and obstacle avoidance using RL. Focusing on decentralized control and cooperative behavior in complex environments.",
-    github: "https://github.com/ParthNikam",
+    id: "mhash2026",
+    title: "Swarify M# Hackathon October 2025",
+    description: "Bidirectional LSTM to classify Indian Karnatic music. shit (model) barely worked during our presentation, still we made it to 6th place out of 30 teams.",
+    github: "https://github.com/parthnikam/Swarify-M-hackathon-2025",
+    demo: "",
+  },
+  {
+    id: "oakhackfest",
+    title: "Oak Hack Fest 2024",
+    description: "Came first at a high-school hackathon. Built an AI study planner and flash-cards generator. The fine tuned llm remembered your mistakes and build your profile based on those mistakes, but I guess we were a little ahead of the current (2026) memory and RAG train.",
+    github: "https://github.com/ParthNikam/oakhackfest_2024",
+    demo: "",
   },
   {
     id: "trym",
     title: "TRYM (aka. Track Your Marks)",
-    subtitle: "Student Performance Analytics",
-    description: "A web app for tracking students' test performance and predicting their future performance using KNN and Logistic Regression. Built with React.js and Firebase.",
+    description: "A web app I built for my high school friends for tracking their weekly test performance and predicting their future performance using KNN and Logistic Regression. Built with React.js and Firebase. It got around 2000+ users at it's peak, but had to shut it down eventually.",
     github: "https://github.com/ParthNikam/track-your-marks-V3",
   },
-  {
-    id: "trym2",
-    title: "TRYM (aka. Track Your Marks)",
-    subtitle: "Student Performance Analytics",
-    description: "A web app for tracking students' test performance and predicting their future performance using KNN and Logistic Regression. Built with React.js and Firebase.",
-    github: "https://github.com/ParthNikam/track-your-marks-V3",
-  },
-  {
-    id: "trym3",
-    title: "TRYM (aka. Track Your Marks)",
-    subtitle: "Student Performance Analytics",
-    description: "A web app for tracking students' test performance and predicting their future performance using KNN and Logistic Regression. Built with React.js and Firebase.",
-    github: "https://github.com/ParthNikam/track-your-marks-V3",
-  },
-  {
-    id: "trym4",
-    title: "TRYM (aka. Track Your Marks)",
-    subtitle: "Student Performance Analytics",
-    description: "A web app for tracking students' test performance and predicting their future performance using KNN and Logistic Regression. Built with React.js and Firebase.",
-    github: "https://github.com/ParthNikam/track-your-marks-V3",
-  },
+ 
 ]
 
 function ProjectCard({ project }: { project: Project }) {
@@ -126,11 +136,8 @@ function ProjectCard({ project }: { project: Project }) {
             ) : (
               <h2 className="text-lg font-semibold text-foreground">{project.title}</h2>
             )}
-            {/* {project.subtitle ? (
-              <p className="mt-1 text-sm text-foreground/70">{project.subtitle}</p>
-            ) : null} */}
           </div>
-          {project.github && !demoUrl ? (
+          {project.github ? (
             <a
               href={project.github}
               target="_blank"
@@ -142,7 +149,7 @@ function ProjectCard({ project }: { project: Project }) {
             </a>
           ) : null}
         </div>
-        <p className="text-base leading-relaxed text-foreground/80">{project.description}</p>
+        <p className="text-base leading-relaxed text-muted-foreground">{project.description}</p>
       </div>
     </div>
   )
@@ -153,11 +160,6 @@ export default function Work() {
     <div className="flex flex-col h-full">
       <div className="max-w-2xl w-full">
         <div className="space-y-8">
-          {/* <div>
-            <h1 className="text-3xl font-bold text-foreground mb-2">Work</h1>
-            <p className="text-base text-foreground/60">stuff i've worked on i think is cool nuf to show</p>
-          </div> */}
-
           <div className="space-y-8 pb-10">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
