@@ -1,4 +1,4 @@
-import { readFileSync } from "fs"
+import { existsSync, readFileSync } from "fs"
 import path from "path"
 
 type Book = {
@@ -12,9 +12,23 @@ type BooksByTag = {
   books: Book[]
 }
 
-const BOOKS_FILE = path.join(process.cwd(), "src", "app", "reading", "BOOKS.md")
 const BOOK_BASE_URL = process.env.BOOK_BASE_URL ?? ""
 const PERSONAL_FAVORITES_TAG = "personal_favorites"
+
+function getBooksFilePath() {
+  const possiblePaths = [
+    path.join(process.cwd(), "src", "app", "reading", "BOOKS.md"),
+    path.join(process.cwd(), "app", "reading", "BOOKS.md"),
+  ]
+
+  const booksFile = possiblePaths.find((filePath) => existsSync(filePath))
+
+  if (!booksFile) {
+    throw new Error(`Could not find BOOKS.md in: ${possiblePaths.join(", ")}`)
+  }
+
+  return booksFile
+}
 
 function toUrlBookName(title: string) {
   const bookName = title.trim().endsWith(".pdf") ? title.trim() : `${title.trim()}.pdf`
@@ -49,7 +63,7 @@ function parseBooksTable(markdown: string): Book[] {
 }
 
 function getBooksByTag(): BooksByTag[] {
-  const markdown = readFileSync(BOOKS_FILE, "utf8")
+  const markdown = readFileSync(getBooksFilePath(), "utf8")
   const groupedBooks = new Map<string, Book[]>()
 
   for (const book of parseBooksTable(markdown)) {
