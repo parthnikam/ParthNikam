@@ -91,7 +91,7 @@ function BookLink({ book, className = "text-base" }: { book: Book; className?: s
       <a
         href={book.url}
         target="_blank" rel="noopener noreferrer"
-        className={`book-link ${className} leading-relaxed text-muted-foreground transition-colors hover:text-foreground`}
+        className={`book-link ${className} break-words leading-relaxed text-muted-foreground transition-colors hover:text-foreground`}
       >
         {book.title}
       </a>
