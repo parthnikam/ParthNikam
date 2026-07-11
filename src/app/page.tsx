@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <div className="flex flex-col h-full">
@@ -22,12 +20,13 @@ export default function About() {
             </p>
         </div>
         <div className="flex-shrink-0 w-full max-w-[400px]">
-          <Image
-            className="rounded-xl object-cover"
+          <img
+            className="block w-full rounded-xl object-cover"
             src="/logo.jpg"
             width={400}
             height={400}
             alt="Parth image"
+            loading="eager"
           />
         </div>
       </div>
