@@ -25,7 +25,7 @@ export default function About() {
          <div className="min-w-[200px] shrink-0">
           <img
             className="block object-cover"
-            src={"/static/images/logo.jpg"}
+            src={"https://raw.githubusercontent.com/parthnikam/ParthNikam/refs/heads/main/public/static/images/logo.jpg"}
             width={200}
             height={200}
             alt="Parth image"
