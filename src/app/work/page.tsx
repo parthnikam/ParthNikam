@@ -93,30 +93,10 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="space-y-3">
       <style>{`
-        @keyframes underlineAnimation {
-          from {
-            width: 0;
-          }
-          to {
-            width: 100%;
-          }
-        }
+        /* Always underline project links (no animation) */
         .project-link {
-          position: relative;
-          text-decoration: none;
-        }
-        .project-link::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 0;
-          height: 1px;
-          background-color: currentColor;
-          transition: width 0.3s ease;
-        }
-        .project-link:hover::after {
-          animation: underlineAnimation 0.3s ease forwards;
+          text-decoration: underline;
+          text-underline-offset: 2px;
         }
       `}</style>
       <div className="flex flex-col gap-2">

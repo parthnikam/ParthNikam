@@ -10,7 +10,6 @@ export default function Sidebar({ className }: { className?: string }) {
     { name: "about", href: "/" },
     { name: "work", href: "/work" },
     { name: "reading", href: "/reading" },
-    { name: "writing", href: "/writing" },
   ];
 
   const socials = [
