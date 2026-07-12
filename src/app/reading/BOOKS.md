@@ -26,7 +26,6 @@
 | Billion Dollar Loser - Reeves Wiedeman | entrepreneurship |
 | Black Holes and Time Warps - Kip Thorne | sci-fi |
 | Book Of Elon - Eric Jorgenson | biographies |
-| Book Of Elon - Eric Jorgenson | reading_now |
 | Buy Back Your Time - Dan Martell | entrepreneurship |
 | C hackers guide | algorithms |
 | CRACKING the CODING INTERVIEW | algorithms |
@@ -34,7 +33,6 @@
 | Cant Hurt Me - David Goggins | biographies |
 | Cant Hurt Me - David Goggins | personal_favorites |
 | Catalyst - How to Change Anyone's Mind | novels |
-| Charlie’s Almanack - The Wit and Wisdom of Charles T. Munger | reading_now |
 | Clean Code | code |
 | Coaching, Mentoring and Managing  A Coach Guidebook | entrepreneurship |
 | Code - The Hidden Language of Computer Hardware and Software | code |
@@ -61,7 +59,6 @@
 | Empire of AI Dreams | biographies |
 | Essays Of Ralph Waldo Emerson | pragmatic |
 | Excellent Advice For Living - Kevin Kelly | novels |
-| Excellent Advice For Living - Kevin Kelly | reading_now |
 | Fabric of Reality - David Deutsch | novels |
 | Flight Plan - Brian Tracy | brian_tracy |
 | GIAC Certified Penetration Tester | hacking |
@@ -93,7 +90,6 @@
 | Marcus Aurelius Meditations.txt | stoic |
 | Mathematics For Machine Learning | machine_learning |
 | Million Dollar Habits - Shirley Whetstone | brian_tracy |
-| Modern Wisdom Reading List - Chris Williamson | reading_now |
 | Modern Wisdom Reading List | novels |
 | Most Important Thing Illuminated - Howard Marks | novels |
 | Myths of Innovation - Scott Berkun | biographies |
@@ -103,12 +99,10 @@
 | Neuromancer - William Gibson | sci-fi |
 | Never Split the Difference - Chris Voss | biographies |
 | Never Split the Difference - Chris Voss | entrepreneurship |
-| Never Split the Difference - Chris Voss | reading_now |
 | Of Human Bondage - W. Somerset Maugham.html | biographies |
 | Old Man and the Sea | novels |
 | One Hundred Years of Solitude | novels |
 | Only the Paranoid Survive - Andrew Grove | entrepreneurship |
-| Only the Paranoid Survive - Andrew Grove | reading_now |
 | Operating Systems | code |
 | Our Great Purpose - Ryan Patrick Hanley | biographies |
 | Oxygen The molecule that made the world | biographies |
@@ -118,7 +112,6 @@
 | Plato Complete Works | stoic |
 | Power, Sex, Suicide - Nick Lane | biographies |
 | Pragmatic Programmer | code |
-| Pragmatic Programmer | reading_now |
 | Press Release ECOSOC | biographies |
 | Psychological Strategies Included by Strength and | biographies |
 | Reinforcement Learning An Introduction | reinforcement_learning |
@@ -130,7 +123,6 @@
 | Sense-Making   Ron Immink | entrepreneurship |
 | Simple Path to Weatlh - JL Collins | biographies |
 | Simple Path to Weatlh - JL Collins | entrepreneurship |
-| Simple Path to Weatlh - JL Collins | reading_now |
 | Small Is Beautiful   Schumacher | entrepreneurship |
 | Snow Crash | sci-fi |
 | Source Code - BIll Gates | biographies |
@@ -151,7 +143,6 @@
 | The Essential Writings of Machiavelli | war |
 | The Fountainhead - Ayn Rand | novels |
 | The Hard Thing About Hard Things - Ben Horowitz | entrepreneurship |
-| The Hard Thing About Hard Things - Ben Horowitz | reading_now |
 | The Kaggle Book | machine_learning |
 | The Leap to Leader PDF | entrepreneurship |
 | The Military Maxims of Napoleon | war |
@@ -179,7 +170,10 @@
 | Well-Spoken Thesaurus - Tom Heehler | biographies |
 | What To Say When You Talk To Yourself - Shad Helmstetter | biographies |
 | Why Programs Fail - Andreas Zeller | code |
-| Why Programs Fail - Andreas Zeller | reading_now |
+| Wealth of Nations - Adam Smith | reading_now |
+| The Art of Doing Science and Engineering | reading_now |
+| Wealth of Nations - Adam Smith | novels |
+| The Art of Doing Science and Engineering | novels |
 | Windows Internals part1 | hacking |
 | Windows Internals part2 | hacking |
 | Your Most Valuable Asset - Brian Tracy | brian_tracy |
