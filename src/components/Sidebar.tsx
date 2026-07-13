@@ -17,7 +17,7 @@ export default function Sidebar({ className }: { className?: string }) {
     { name: "LinkedIn", href: "https://linkedin.com/in/parthnikam108" },
     { name: "X", href: "https://x.com/prthnkm" },
     { name: "Email", href: "mailto:108parthnikam@gmail.com" },
-    { name: "Substack", href: "https://substack.com" },
+    { name: "Substack", href: "https://substack.com/@parthnikam108" },
   ];
 
   return (

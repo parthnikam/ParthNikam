@@ -111,25 +111,30 @@ function ProjectCard({ project }: { project: Project }) {
                   className="project-link text-lg font-semibold text-foreground inline-flex items-center gap-2"
                 >
                   {project.title}
+                  {project.github ? (
+                    <GithubIcon className="size-4 shrink-0" />
+                  ) : null}
                 </a>
               </h2>
             ) : (
-              <h2 className="text-lg font-semibold text-foreground">{project.title}</h2>
+              <h2 className="text-lg font-semibold text-foreground inline-flex items-center gap-2">
+                {project.title}
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs font-semibold text-foreground hover:underline transition-all"
+                  >
+                    <GithubIcon className="size-4 shrink-0" />
+                  </a>
+                ) : null}
+              </h2>
             )}
+        <p className="text-base leading-relaxed text-foreground">— {project.description}</p>
+
           </div>
-          {project.github ? (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs font-semibold text-foreground hover:underline transition-all"
-            >
-              <GithubIcon className="size-4 shrink-0" />
-              Code
-            </a>
-          ) : null}
         </div>
-        <p className="text-base leading-relaxed text-muted-foreground">{project.description}</p>
       </div>
     </div>
   )

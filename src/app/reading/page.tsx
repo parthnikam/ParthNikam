@@ -91,7 +91,7 @@ function BookLink({ book, className = "text-base" }: { book: Book; className?: s
       <a
         href={book.url}
         target="_blank" rel="noopener noreferrer"
-        className={`book-link ${className} break-words leading-relaxed text-muted-foreground transition-colors hover:text-foreground`}
+        className={`book-link ${className} break-words leading-relaxed text-foreground transition-colors hover:text-foreground`}
       >
         {book.title}
       </a>
@@ -104,7 +104,7 @@ function BookGroup({ group, compact = false }: { group: BooksByTag; compact?: bo
     <section className="space-y-3">
       <div>
         <h2 className="text-lg font-semibold text-foreground">{group.tag}</h2>
-        <p className="text-sm text-muted-foreground">{group.books.length} books</p>
+        <p className="text-sm text-foreground">{group.books.length} books</p>
       </div>
       <ul className="space-y-1 border-l border-border pl-4">
         {group.books.map((book) => (
