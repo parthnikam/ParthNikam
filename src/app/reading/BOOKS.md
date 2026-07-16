@@ -125,8 +125,8 @@
 | Simple Path to Weatlh - JL Collins | entrepreneurship |
 | Small Is Beautiful   Schumacher | entrepreneurship |
 | Snow Crash | sci-fi |
-| Source Code - BIll Gates | biographies |
-| Source Code - BIll Gates | personal_favorites |
+| Source Code - Bill Gates | biographies |
+| Source Code - Bill Gates | personal_favorites |
 | Speak to win - Brian Tracy | brian_tracy |
 | Stillness Speaks - Eckhart Tolle | pragmatic |
 | Stoic Six Pack Meditations of Marcus Aurelius | stoic |
@@ -171,7 +171,7 @@
 | What To Say When You Talk To Yourself - Shad Helmstetter | biographies |
 | Why Programs Fail - Andreas Zeller | code |
 | Wealth of Nations - Adam Smith | reading_now |
-| Source Code - BIll Gates | reading_now |
+| Source Code - Bill Gates | reading_now |
 | The Creative Act By Rick Rubin | reading_now |
 | Wealth of Nations - Adam Smith | novels |
 | The Art of Doing Science and Engineering | novels |
