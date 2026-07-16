@@ -171,9 +171,11 @@
 | What To Say When You Talk To Yourself - Shad Helmstetter | biographies |
 | Why Programs Fail - Andreas Zeller | code |
 | Wealth of Nations - Adam Smith | reading_now |
-| The Art of Doing Science and Engineering | reading_now |
+| Source Code - BIll Gates | reading_now |
+| The Creative Act By Rick Rubin | reading_now |
 | Wealth of Nations - Adam Smith | novels |
 | The Art of Doing Science and Engineering | novels |
+| The Creative Act By Rick Rubin | biographies | 
 | Windows Internals part1 | hacking |
 | Windows Internals part2 | hacking |
 | Your Most Valuable Asset - Brian Tracy | brian_tracy |
