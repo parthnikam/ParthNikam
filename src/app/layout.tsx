@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className="font-sans antialiased" style={{ fontFamily: "'Titillium Web', sans-serif" }}>
         <div className="light min-h-screen w-full overflow-x-hidden bg-background text-foreground antialiased px-4 py-6 sm:px-6 sm:py-12">
           <div className="mx-auto flex w-full max-w-4xl items-start gap-2 lg:mt-16">
-            <Sidebar />
+            <Sidebar className="sticky top-0" />
             <main className="w-full min-w-0 flex-1">
               {children}
             </main>
