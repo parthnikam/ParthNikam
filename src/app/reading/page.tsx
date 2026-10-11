@@ -1,6 +1,3 @@
-import { existsSync, readFileSync } from "fs"
-import path from "path"
-
 type Book = {
   title: string
   tag: string
@@ -13,22 +10,11 @@ type BooksByTag = {
 }
 
 const BOOK_BASE_URL = process.env.BOOK_BASE_URL ?? ""
+const BOOKS_MD_URL =
+  "https://raw.githubusercontent.com/parthnikam/books/refs/heads/main/BOOKS.md"
 const PERSONAL_FAVORITES_TAG = "personal_favorites"
 
-function getBooksFilePath() {
-  const possiblePaths = [
-    path.join(process.cwd(), "src", "app", "reading", "BOOKS.md"),
-    path.join(process.cwd(), "app", "reading", "BOOKS.md"),
-  ]
-
-  const booksFile = possiblePaths.find((filePath) => existsSync(filePath))
-
-  if (!booksFile) {
-    throw new Error(`Could not find BOOKS.md in: ${possiblePaths.join(", ")}`)
-  }
-
-  return booksFile
-}
+export const dynamic = "force-dynamic"
 
 function toUrlBookName(title: string) {
   const bookName = title.trim().endsWith(".pdf") ? title.trim() : `${title.trim()}.pdf`
@@ -62,8 +48,14 @@ function parseBooksTable(markdown: string): Book[] {
     }))
 }
 
-function getBooksByTag(): BooksByTag[] {
-  const markdown = readFileSync(getBooksFilePath(), "utf8")
+async function getBooksByTag(): Promise<BooksByTag[]> {
+  const response = await fetch(BOOKS_MD_URL, { cache: "no-store" })
+
+  if (!response.ok) {
+    throw new Error(`Could not fetch books from ${BOOKS_MD_URL}`)
+  }
+
+  const markdown = await response.text()
   const groupedBooks = new Map<string, Book[]>()
 
   for (const book of parseBooksTable(markdown)) {
@@ -119,8 +111,8 @@ function BookGroup({ group, compact = false }: { group: BooksByTag; compact?: bo
   )
 }
 
-export default function Reading() {
-  const booksByTag = getBooksByTag()
+export default async function Reading() {
+  const booksByTag = await getBooksByTag()
   const personalFavorites = booksByTag.find(
     (group) => group.tag === PERSONAL_FAVORITES_TAG
   )
