@@ -16,7 +16,7 @@ export default function About() {
           </p>
 
           <p className="leading-relaxed font-normal  text-foreground">
-            currently building some agentic ai stuff. 
+            my latest robotics project is building a volumetric display the way james brown did it. It's either not going to work or its going to work super awesome.
           </p>
           <p className="leading-relaxed font-normal  text-foreground">
             i do a bit of ML, a bit of web dev, a bit of competitive programming and a bit of meditation.

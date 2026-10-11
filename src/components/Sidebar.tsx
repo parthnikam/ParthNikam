@@ -21,7 +21,7 @@ export default function Sidebar({ className }: { className?: string }) {
   ];
 
   return (
-    <aside className={`flex flex-col gap-4 w-24 lg:w-32 min-w-[5.5rem] py-10 shrink-0 px-1 ${className || ''}`}>
+    <aside className={`flex flex-col gap-4 w-24 lg:w-32 min-w-[5.5rem] shrink-0 px-1 ${className || ''}`}>
       <nav className="space-y-2">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
